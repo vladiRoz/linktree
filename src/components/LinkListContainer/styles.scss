@@ -1,0 +1,72 @@
+@import '../../styles/main.scss';
+
+
+.linkList {
+    border: 1px solid $color-default-border;
+    height: 100vh;
+    position: relative;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    overflow-y: auto;
+
+    &-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+
+        height: 100%;
+        grid-gap: 3rem;
+    }
+
+    &--profileLogo {
+        grid-area: header;
+        margin-top: 3rem;
+    }
+
+    &--list {
+        grid-area: main;
+    }
+
+    &--logo {
+        grid-area: footer;
+        margin-bottom: 3rem;
+    }
+
+}
+
+// .linkList {
+//     border: 1px solid $color-default-border;
+//     height: 100vh;
+//     position: relative;
+
+//     &-container {
+//         width: 95%;
+//         height: 100%;
+//         position: relative;
+//         left: 50%;
+//         transform: translateX(-50%);
+//     }
+
+//     &--profileLogo {
+//         position: relative;
+//         top: 5%;
+//     }
+
+//     &--list {
+//         position: relative;
+//         display: block;
+//         top: 10%;
+//     }
+
+//     &--logo {
+//         position: re;
+//         display: block;
+//         top: 90%;
+//         left: 50%;
+//         min
+//     }
+// }

@@ -1,0 +1,22 @@
+@import '../../styles/main.scss';
+
+.profile {
+    text-align: center;
+    position: relative;
+
+    &__logo {
+        display: block;
+        height: 7rem;
+        border-radius: 3.5rem;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+    }
+
+    &__profileName {
+        display: block;
+        color: $color-primary-text;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+}

@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+
+    &__logo {
+        display: block;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        height: 2rem;
+    }
+}
