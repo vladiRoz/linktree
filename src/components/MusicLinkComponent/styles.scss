@@ -1,0 +1,21 @@
+@import '../../styles/main.scss';
+
+.musicLink {
+
+    &__linkList {
+        background-color: $color-primary-links-bg;
+        transition: all 0.5s;
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+
+    &__linkList[animate='open'] {
+        animation: slideDown 0.5s 1;
+        transform: scaleY(1);
+    }
+
+    &__linkList[animate='close'] {
+        animation: slideUp 0.5s 1;
+        visibility: hidden;
+    }
+}
