@@ -11,22 +11,26 @@ const Template = (args) => <MusicStyleListComponent {...args} />;
 
 export const MusicStyleListTest = Template.bind({});
 MusicStyleListTest.args = {
-    clickListener: (id) => console.log('clicked', id),
-    components: [
+    clickListener: (data) => console.log('clicked', data),
+    id: 0,
+    label: "Music",
+    musicUrls: [
       {
-        type: LINK_COMPONENTS.button,
-        props: {
-          id: 0,
-          label: "49H",
-        },
+        id: 0,
+        label: 'Spotify',
+        url: 'www',
       },
       {
-        type: LINK_COMPONENTS.button,
-        props: {
-          id: 1,
-          label: "49H",
-        },
+        id: 1,
+        label: 'Apple Music',
+        url: 'www',
+      },
+      {
+        id: 2,
+        label: 'SoundCloud',
+        url: 'www',
       }
     ],
   };
+  
 

@@ -163,3 +163,9 @@ const LinkListContainer = () => {
 };
 
 export default LinkListContainer;
+
+// TODO rename file to screen or page
+
+// use the same for the music style page
+
+// the three screens should only pass the configuration object
