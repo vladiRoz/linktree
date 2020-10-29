@@ -15,21 +15,20 @@ const Template = (args) => <LinkListComponent {...args} />;
 // add the link container to the app
 export const linkListTest = Template.bind({});
 linkListTest.args = {
+  clickListener: (id) => console.log('clicked', id),
   components: [
     {
       type: LINK_COMPONENTS.button,
       props: {
-        key: 0,
+        id: 0,
         label: "49H",
-        onClick: () => { console.log('click') }
       },
     },
     {
       type: LINK_COMPONENTS.button,
       props: {
-        key: 1,
+        id: 1,
         label: "49H",
-        onClick: () => { console.log('click') }
       },
     }
   ],

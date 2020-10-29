@@ -9,7 +9,7 @@ const linkComponents = [
     {
       type: LINK_COMPONENTS.button,
       props: {
-        key: 0,
+        id: 0,
         label: "48H",
         onClick: () => { console.log('click') }
       },
@@ -17,7 +17,7 @@ const linkComponents = [
     {
       type: LINK_COMPONENTS.button,
       props: {
-        key: 1,
+        id: 1,
         label: "48H",
         onClick: () => { console.log('click') } 
       },
@@ -25,7 +25,7 @@ const linkComponents = [
     {
         type: LINK_COMPONENTS.button,
         props: {
-          key: 2,
+          id: 2,
           label: "48H",
           onClick: () => { console.log('click') } 
         },
@@ -33,7 +33,7 @@ const linkComponents = [
       {
         type: LINK_COMPONENTS.button,
         props: {
-          key: 3,
+          id: 3,
           label: "48H",
           onClick: () => { console.log('click') } 
         },
@@ -41,7 +41,7 @@ const linkComponents = [
       {
         type: LINK_COMPONENTS.button,
         props: {
-          key: 4,
+          id: 4,
           label: "48H",
           onClick: () => { console.log('click') } 
         },
@@ -49,7 +49,7 @@ const linkComponents = [
       {
         type: LINK_COMPONENTS.button,
         props: {
-          key: 5,
+          id: 5,
           label: "48H",
           onClick: () => { console.log('click') } 
         },
@@ -57,7 +57,7 @@ const linkComponents = [
     //   {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //       key: 6,
+    //       id: 6,
     //       label: "48H",
     //       onClick: () => { console.log('click') } 
     //     },
@@ -65,7 +65,7 @@ const linkComponents = [
     //   {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //       key: 7,
+    //       id: 7,
     //       label: "48H",
     //       onClick: () => { console.log('click') } 
     //     },
@@ -73,7 +73,7 @@ const linkComponents = [
     //   {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //       key: 8,
+    //       id: 8,
     //       label: "48H",
     //       onClick: () => { console.log('click') } 
     //     },
@@ -81,7 +81,7 @@ const linkComponents = [
     // {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 9,
+    //         id: 9,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -89,7 +89,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 10,
+    //         id: 10,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -97,7 +97,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 11,
+    //         id: 11,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -105,7 +105,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 12,
+    //         id: 12,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -113,7 +113,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 13,
+    //         id: 13,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -121,7 +121,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 14,
+    //         id: 14,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -129,7 +129,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 15,
+    //         id: 15,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },
@@ -137,7 +137,7 @@ const linkComponents = [
     //     {
     //     type: LINK_COMPONENTS.button,
     //     props: {
-    //         key: 16,
+    //         id: 16,
     //         label: "48H",
     //         onClick: () => { console.log('click') } 
     //     },

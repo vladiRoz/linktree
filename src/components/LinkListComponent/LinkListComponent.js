@@ -5,15 +5,21 @@ import './styles.scss';
 
 export const LINK_COMPONENTS = {
     button: 'button',
+    musicLink: 'musicLink',
 }
 
-const generateComponent = (component) => {
+const generateComponent = (component, clickListener) => {
     let retComponent;
     const { type, props } = component;
+    const { id } = props;
     switch (type) {
         case LINK_COMPONENTS.button:
             retComponent = (
-                <ButtonComponent {...props} />
+                <ButtonComponent 
+                    onClick={() => clickListener(id)}
+                    key={id}
+                    {...props}
+                />
             );
             break;
         default:
@@ -21,13 +27,13 @@ const generateComponent = (component) => {
     return retComponent;
 }
 
-const generateComponentsList = (components) => 
-    (components.map(component => generateComponent(component)));
+const generateComponentsList = (components, clickListener) => 
+    (components.map(component => generateComponent(component, clickListener)));
 
-const LinkListComponent = ({ components }) => {
+const LinkListComponent = ({ components, clickListener }) => {
     return (
         <div className="linkListContainer">
-           { generateComponentsList(components) }
+           { generateComponentsList(components, clickListener) }
         </div>
     );
 }
@@ -39,10 +45,12 @@ LinkListComponent.propTypes = {
             props: PropTypes.any,
         })
     ).isRequired,
+    clickListener: PropTypes.func,
 };
 
 LinkListComponent.defaultProps = {
     components: [],
+    clickListener: undefined,
 };
 
 export default LinkListComponent;
