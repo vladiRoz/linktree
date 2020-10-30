@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompass, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
-import { LinearProgress } from '@material-ui/core';
+import ColoredLinearProgress from '../ProgressBarComponent';
 import './styles.scss';
 
 // TODO click to open the url
@@ -35,21 +35,24 @@ const renderSelectedMusicLink = (selectedIndex, musicUrls) => {
                 <FontAwesomeIcon className="musicLinkContainer-selected__icon" icon={faPlayCircle} />
                 <span className="musicLinkContainer-selected__label">{label}</span>
             </div>
-            <LinearProgress 
+            <ColoredLinearProgress 
                 className="musicLinkContainer-selected__progress"
                 variant="determinate" 
-                value={20} />
+                value={20} 
+                // change color, get it from central location
+            />
         </>
     );
 }
 
+// TODO dont show anythin in the begining 
 const MusicStyleListComponent = (props) => {
     const { musicUrls } = props;
-    const [selectedIndex, setSelectedMusicUrlIndex] = useState(-1);
+    const [selectedIndex, setSelectedMusicUrlIndex] = useState(0);
     return (
         <div className="musicLinkContainer">
             <div className="musicLinkContainer-selected">
-                {selectedIndex !== -1 && renderSelectedMusicLink(selectedIndex, musicUrls)}
+                {renderSelectedMusicLink(selectedIndex, musicUrls)}
             </div>
             <ul className="musicLinksList">
                 {generateMusicUrlsList(musicUrls, setSelectedMusicUrlIndex)}

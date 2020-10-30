@@ -5,6 +5,7 @@
     &-selected {
         height: 6rem;
         margin-left: 1rem;
+        margin-right: 1rem;
 
         &__wrapper {
             display: flex;
@@ -22,6 +23,7 @@
 
         &__icon {
             margin-right: 1rem;
+            color: #71DCA0;
         }
 
         &__label {}
