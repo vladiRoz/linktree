@@ -1,13 +1,43 @@
 @import '../../styles/main.scss';
 
+.musicLinkContainer {
+
+    &-selected {
+        height: 6rem;
+        margin-left: 1rem;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__logo {
+            height: 3rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        &__icon {
+            margin-right: 1rem;
+        }
+
+        &__label {}
+
+        &__progress {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 .musicLinksList {
     background-color: $color-primary-links-bg;
     list-style-type: none;
     margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0;
     width: 100%;
-
 
     &>.musicLinksList__item:not(:last-child)>.musicLinksList__item--wrapper {
         border-bottom: 1px solid #bbb;
@@ -21,6 +51,10 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 0;
+
+        &:hover {
+            background-color: $color-primary-links-hover-bg;
+        }
 
         &--logo {
             margin-left: 1rem;

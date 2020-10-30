@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCompass } from "@fortawesome/free-solid-svg-icons";
+import { faCompass, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import { LinearProgress } from '@material-ui/core';
 import './styles.scss';
 
 // TODO click to open the url
-const generateMusicUrlsList = (urlsArray) => {
-    return urlsArray.map(urlData => {
+const generateMusicUrlsList = (urlsArray, setSelectedMusicUrlIndex) => {
+    return urlsArray.map((urlData, index) => {
         const { id, label, url } = urlData;
         return (
-            <li key={id} className="musicLinksList__item">
+            <li 
+                key={id} 
+                className="musicLinksList__item"
+                onClick={() => setSelectedMusicUrlIndex(index)}
+            >
                 <FontAwesomeIcon className="musicLinksList__item--logo" icon={faCompass} />
                 <div className="musicLinksList__item--wrapper">
                     <span className="musicLinksList__item--label">{label}</span>
@@ -20,12 +25,34 @@ const generateMusicUrlsList = (urlsArray) => {
     });
 }
 
+const renderSelectedMusicLink = (selectedIndex, musicUrls) => {
+    // add img or url to image
+    const {id, label, url} = musicUrls[selectedIndex];
+    return ( 
+        <>
+            <div className="musicLinkContainer-selected__wrapper">
+                <img src="vlmsmall.jpg" alt="logo" className="musicLinkContainer-selected__logo" />
+                <FontAwesomeIcon className="musicLinkContainer-selected__icon" icon={faPlayCircle} />
+                <span className="musicLinkContainer-selected__label">{label}</span>
+            </div>
+            <LinearProgress 
+                className="musicLinkContainer-selected__progress"
+                variant="determinate" 
+                value={20} />
+        </>
+    );
+}
+
 const MusicStyleListComponent = (props) => {
     const { musicUrls } = props;
+    const [selectedIndex, setSelectedMusicUrlIndex] = useState(-1);
     return (
-        <div>
+        <div className="musicLinkContainer">
+            <div className="musicLinkContainer-selected">
+                {selectedIndex !== -1 && renderSelectedMusicLink(selectedIndex, musicUrls)}
+            </div>
             <ul className="musicLinksList">
-                {generateMusicUrlsList(musicUrls)}
+                {generateMusicUrlsList(musicUrls, setSelectedMusicUrlIndex)}
             </ul>
         </div>
     );
