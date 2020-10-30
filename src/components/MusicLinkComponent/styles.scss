@@ -1,0 +1,19 @@
+@import '../../styles/main.scss';
+
+.musicLink {
+
+    &__linkList {
+        background-color: $color-primary-links-bg;
+        display: none;
+    }
+
+    &__linkList[animate='open'] {
+        animation: slideDown 0.5s 1;
+        display: block;
+    }
+
+    &__linkList[animate='close'] {
+        animation: slideUp 0.5s 1;
+        display: none;
+    }
+}
