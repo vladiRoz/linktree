@@ -1,10 +1,11 @@
 import React from 'react';
-import ProfileLogoComponent from '../ProfileLogoComponent';
-import LinkListComponent from '../LinkListComponent';
-import LogoComponent from '../LogoComponent'
+import ProfileLogoComponent from '../../components/ProfileLogoComponent';
+import LinkListComponent from '../../components/LinkListComponent';
+import LogoComponent from '../../components/LogoComponent'
 import './styles.scss';
 
-const LinkListContainer = ({ linkComponents }) => {
+// the three screens only pass the configuration object
+const LinkListContainer = ({ linkComponents, clickListener }) => {
     return (
         <div className="linkList">
             <div className="linkList-container">
@@ -12,7 +13,9 @@ const LinkListContainer = ({ linkComponents }) => {
                     <ProfileLogoComponent imgSrc="vlmsmall.jpg" profileName="@vladiRozen"/>
                 </div>
                 <div className="linkList--list">
-                    <LinkListComponent components={linkComponents}/>
+                    <LinkListComponent
+                        clickListener={clickListener}
+                        components={linkComponents}/>
                 </div>
                 <div className="linkList--logo">
                     <LogoComponent imgSrc="logo192.png" />
@@ -22,12 +25,6 @@ const LinkListContainer = ({ linkComponents }) => {
     );
 };
 
-// TODO add props and default props
+// TODO add props and default props!
 
 export default LinkListContainer;
-
-// TODO rename file to screen or page
-
-// use the same for the music style page
-
-// the three screens should only pass the configuration object

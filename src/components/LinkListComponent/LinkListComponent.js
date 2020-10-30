@@ -12,7 +12,6 @@ export const LINK_COMPONENTS = {
 // TODO
 // inject child from parent component intead of type checking
 const generateComponent = (component, clickListener) => {
-    console.log('generateCompoennt', component);
     let retComponent;
     const { type, props } = component;
     const { id } = props;
@@ -20,8 +19,8 @@ const generateComponent = (component, clickListener) => {
         case LINK_COMPONENTS.button:
             retComponent = (
                 <ButtonComponent 
-                    onClick={() => clickListener({ type, id})}
                     key={id}
+                    onClick={() => clickListener({ type, id})}
                     {...props}
                 />
             );
@@ -29,6 +28,7 @@ const generateComponent = (component, clickListener) => {
         case LINK_COMPONENTS.musicLink:
             retComponent = (
                 <MusicLinkComponent
+                    key={id}
                     onClick={() => clickListener({ type, id })}
                     {...props}
                 />
