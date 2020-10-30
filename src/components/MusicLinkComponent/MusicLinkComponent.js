@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ButtonComponent from "../ButtonComponent";
 import './styles.scss';
+import MusicStyleListComponent from '../MusicStyleListComponent';
 
-// TODO set props
 const MusicLinkComponent = (props) => {
+    const { id, label, musicUrls } = props;
     const [isShowLinks, setIsShowLinks] = useState(false);
     return (
         <div className="musicLink">
@@ -16,13 +17,8 @@ const MusicLinkComponent = (props) => {
                     className="musicLink__linkList"
                     animate={isShowLinks ? 'open' : 'close'}
                 >
-
-
-                    <ButtonComponent
-                        label="Music1"
-                    />
-                    <ButtonComponent
-                        label="Music2"
+                    <MusicStyleListComponent
+                        musicUrls={musicUrls}
                     />
                 </div>
 
@@ -31,7 +27,15 @@ const MusicLinkComponent = (props) => {
 }
 
 MusicLinkComponent.propTypes = {
-    // TODO
+    id: PropTypes.number,
+    label: PropTypes.string,
+    musicUrls: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number,
+            label: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 };
 
 export default MusicLinkComponent;

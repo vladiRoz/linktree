@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonComponent from '../ButtonComponent';
-import MusicStyleListComponent from '../MusicStyleListComponent';
 import './styles.scss';
+import MusicLinkComponent from '../MusicLinkComponent';
 
 export const LINK_COMPONENTS = {
     button: 'button',
@@ -12,6 +12,7 @@ export const LINK_COMPONENTS = {
 // TODO
 // inject child from parent component intead of type checking
 const generateComponent = (component, clickListener) => {
+    console.log('generateCompoennt', component);
     let retComponent;
     const { type, props } = component;
     const { id } = props;
@@ -25,11 +26,13 @@ const generateComponent = (component, clickListener) => {
                 />
             );
             break;
-        case LinkListComponent.musicLink:
-            <MusicStyleListComponent
-                onClick={() => clickListener({type, id})}
-                {...props}
-            />
+        case LINK_COMPONENTS.musicLink:
+            retComponent = (
+                <MusicLinkComponent
+                    onClick={() => clickListener({ type, id })}
+                    {...props}
+                />
+            );
             break;
         default:
     }
