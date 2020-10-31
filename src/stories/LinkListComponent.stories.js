@@ -15,21 +15,44 @@ const Template = (args) => <LinkListComponent {...args} />;
 // add the link container to the app
 export const linkListTest = Template.bind({});
 linkListTest.args = {
+  clickListener: (data) => console.log('clicked', data),
   components: [
     {
-      type: LINK_COMPONENTS.button,
+      type: LINK_COMPONENTS.musicLink,
       props: {
-        key: 0,
-        label: "49H",
-        onClick: () => { console.log('click') }
+        id: 0,
+        label: "Music",
+        musicUrls: [
+          {
+            id: 0,
+            label: 'Spotify',
+            url: 'www',
+          },
+          {
+            id: 1,
+            label: 'Apple Music',
+            url: 'www',
+          },
+          {
+            id: 2,
+            label: 'SoundCloud',
+            url: 'www',
+          }
+        ],
       },
     },
     {
       type: LINK_COMPONENTS.button,
       props: {
-        key: 1,
-        label: "49H",
-        onClick: () => { console.log('click') }
+        id: 1,
+        label: "Link 2",
+      },
+    },
+    {
+      type: LINK_COMPONENTS.button,
+      props: {
+        id: 3,
+        label: "Link 3",
       },
     }
   ],

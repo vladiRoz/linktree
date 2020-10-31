@@ -1,0 +1,24 @@
+@keyframes slideDown {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        // sum of the heights of the selected part and the list
+        height: 15rem;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: 10rem;
+        opacity: 1;
+    }
+
+    to {
+        height: 0rem;
+        opacity: 0;
+    }
+}

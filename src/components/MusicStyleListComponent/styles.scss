@@ -1,0 +1,82 @@
+@import '../../styles/main.scss';
+
+.musicLinkContainer {
+
+    &-selected {
+        height: 6rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__logo {
+            height: 3rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        &__icon {
+            margin-right: 1rem;
+            color: #71DCA0;
+        }
+
+        &__label {}
+
+        &__progress {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.musicLinksList {
+    background-color: $color-primary-links-bg;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &>.musicLinksList__item:not(:last-child)>.musicLinksList__item--wrapper {
+        border-bottom: 1px solid #bbb;
+    }
+
+    &__item {
+        background-color: $color-primary-links-bg;
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+
+        &:hover {
+            background-color: $color-primary-links-hover-bg;
+        }
+
+        &--logo {
+            margin-left: 1rem;
+        }
+
+        &--wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-left: 1rem;
+            align-items: center;
+        }
+
+        &--label {}
+
+        &--icon {
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+    }
+
+}
