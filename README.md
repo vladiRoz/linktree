@@ -32,29 +32,31 @@ This way allows the simple creation of new pages and extensions in the future.
 <br/>
 
 <h5>
-Configuration example:
-const linkComponents = [
-    {
-      type: LINK_COMPONENTS.musicLink,
-      props: {
-        id: 0,
-        label: "Music",
-        musicUrls: [
-          {
-            id: 0,
-            label: 'Spotify',
-            url: 'www',
-          },
-        ],
-    }
-  },
-  {
-    type: LINK_COMPONENTS.button,
-    props: {
-      id: 1,
-      label: "48H",
-    },
-  },
-];
 
+Configuration example:
+```
+    {
+        type: 'musicLink',
+        props: {
+            id: 0,
+            label: "Music",
+            musicUrls: [
+                {
+                    id: 0,
+                    label: 'Spotify',
+                    url: 'www',
+                },
+            ],
+        }
+    },
+    {
+        type: 'button',
+        props: {
+            id: 1,
+            label: "48H",
+            url: "https://linktr.ee/",
+        },
+    },
+];
+```
 </h5>
