@@ -53,7 +53,6 @@ class MusicLinkPage extends Component {
       console.log('click', clickData);
     }
 
-
     render() {
         return (
             <div>
