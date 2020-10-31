@@ -1,20 +1,27 @@
-
+<p>
 Run with:
-<br>
 yarn install
-<br>
+<br/>
 yarn start
-<br>
+</p>
+
+![Alt text](ss1.png "Music link page")
 
 Run Storybook with:
-<br>
+<br/>
 yarn run storybook
 
-<br>
-<br>
+<br/>
+<br/>
+
 ![Alt text](ss1.png "Music link page")
+<br>
+
 ![Alt text](ss2.png "Classic link page")
+<br/>
+
 ![Alt text](ss3.png "High level structure")
+<br/>
 
 <h5>
 All pages are rendered through the same component: LinkListContainer.
@@ -22,8 +29,8 @@ This component contains the three parts of each page: profile, links list and bo
 The links list component (LinkListComponent) will render a dynamic list from a configuration object that is being passed from the main page component.
 This way allows the simple creation of new pages and extensions in the future.
 </h5>
-<br>
-<br>
+
+<br/>
 
 <h5>
 Configuration example:
@@ -51,4 +58,4 @@ const linkComponents = [
   },
 ];
 
-<h5>
+</h5>
