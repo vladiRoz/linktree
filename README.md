@@ -1,11 +1,10 @@
 <p>
 Run with:
+<br/>
 yarn install
 <br/>
 yarn start
 </p>
-
-![Alt text](ss1.png "Music link page")
 
 Run Storybook with:
 <br/>
