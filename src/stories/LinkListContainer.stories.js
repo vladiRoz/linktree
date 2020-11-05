@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkListContainer from '../components/LinkListContainer';
+import LinkListContainer from '../layouts/LinkListContainer';
 import {LINK_COMPONENTS} from '../components/LinkListComponent/LinkListComponent'
 
 export default {
